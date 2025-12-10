@@ -956,9 +956,30 @@ ul {
         max-width: 250px;
     }
 
-    /* Hide floating boxes on mobile */
+    /* Adjust floating boxes for mobile */
     .floating-box {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+        gap: 6px;
+    }
+
+    .floating-box i {
+        font-size: 0.9rem;
+    }
+
+    .floating-box-1 {
+        top: -10px;
+        right: 10px;
+    }
+
+    .floating-box-2 {
         display: none;
+        /* Hide middle box on mobile as it may overlap */
+    }
+
+    .floating-box-3 {
+        bottom: -10px;
+        right: 10px;
     }
 
     /* Hide scroll down indicator on mobile */
