@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,58 +24,54 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">ELITE <span class="gold-text">ESTATES</span></a>
+            <a href="#" class="logo">SHYAM <span class="gold-text">SHRESTHA</span></a>
             <div class="nav-toggle" id="nav-toggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item search-item">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search Properties..." aria-label="Search Properties">
-                        <button type="button" class="search-btn"><i class="fas fa-search"></i></button>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#properties" class="nav-link">Properties</a></li>
-                <li class="nav-item"><a href="#neighborhoods" class="nav-link">Neighborhoods</a></li>
-                <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link btn-contact">Contact Us</a></li>
+                <li class="nav-item"><a href="#work-approach" class="nav-link">Work Approach</a></li>
+                <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link btn-contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero" id="home">
-        <!-- Video Background -->
-        <div class="video-container">
-            <video autoplay muted loop playsinline
-                poster="https://images.unsplash.com/photo-1600596542815-e328701991a9?q=80&w=2674&auto=format&fit=crop">
-                <!-- Using a placeholder video link -->
-                <source src="https://videos.pexels.com/video-files/3770033/3770033-uhd_2560_1440_25fps.mp4"
-                    type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="overlay"></div>
-        </div>
+        <div class="container hero-container">
+            <div class="hero-text fade-on-scroll">
 
-        <!-- Hero Content -->
-        <div class="hero-content container">
-            <div class="hero-text fade-in-up">
-                <h2 class="sub-tagline">Exclusivity. Luxury. Lifestyle.</h2>
-                <h1 class="main-tagline">Helping You Find <br>Your <span class="gold-text italic">Dream Home</span></h1>
-                <p class="description">Experience the pinnacle of real estate service with access to the most coveted
-                    properties in the region.</p>
+                <h1 class="section-title">Helping You Find<br>Your <span class="gold-text">Dream Home</span></h1>
+                <p class="hero-description">
+                    Experience the pinnacle of real estate service with personalized guidance,
+                    expert market knowledge, and unwavering commitment to your success. Let me help you
+                    discover properties that truly reflect your lifestyle and aspirations.
+                </p>
                 <div class="cta-buttons">
-                    <a href="#properties" class="btn btn-primary">View Properties</a>
-                    <a href="#neighborhoods" class="btn btn-outline">View Neighborhoods</a>
+                    <a href="#services" class="btn btn-primary">Explore Services</a>
+                    <a href="#contact" class="btn btn-outline-dark">Get In Touch</a>
                 </div>
             </div>
-            <div class="hero-image fade-in-right">
-                <!-- Placeholder Agent Image -->
-                <div class="img-frame">
+            <div class="hero-image fade-on-scroll">
+                <!-- Floating Info Boxes -->
+                <div class="floating-box floating-box-1">
+                    <i class="fas fa-home"></i>
+                    <span>Find Your Dream Home</span>
+                </div>
+
+                <div class="floating-box floating-box-3">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Buy • Sell • Invest</span>
+                </div>
+
+                <div class="image-frame-luxury">
                     <img src="https://images.unsplash.com/photo-1627161684458-a62da52b51c3?q=80&w=1098&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Luxury Real Estate Agent">
+                    <div class="frame-accent"></div>
                 </div>
             </div>
         </div>
@@ -147,6 +143,91 @@
             </div>
         </div>
     </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header center-text fade-on-scroll">
+                <h4 class="section-subtitle">What I Offer</h4>
+                <h2 class="section-title">Comprehensive <span class="gold-text">Services</span></h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card fade-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="service-title">Buyer Representation</h3>
+                    <p class="service-description">
+                        Personalized guidance through every step of finding and securing your dream property,
+                        with access to exclusive listings and off-market opportunities.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card fade-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="service-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 class="service-title">Seller Representation</h3>
+                    <p class="service-description">
+                        Strategic marketing and expert negotiation to maximize your property's value and
+                        ensure a seamless, profitable sale.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card fade-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Property Valuation</h3>
+                    <p class="service-description">
+                        Accurate, data-driven market analysis to help you understand your property's true worth
+                        in today's competitive market.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card fade-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="service-title">Investment Consulting</h3>
+                    <p class="service-description">
+                        Expert advice on building and managing a profitable real estate portfolio,
+                        tailored to your financial goals and risk tolerance.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card fade-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="service-title">Relocation Services</h3>
+                    <p class="service-description">
+                        Comprehensive support for clients moving to the area, including neighborhood tours,
+                        school information, and local insights.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card fade-on-scroll" style="animation-delay: 0.5s;">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="service-title">Luxury Portfolio Management</h3>
+                    <p class="service-description">
+                        White-glove service for high-net-worth clients seeking discretion, exclusivity,
+                        and unparalleled attention to detail.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Testimonials Section -->
     <section class="testimonials-section" id="testimonials">
@@ -225,116 +306,101 @@
         </div>
     </section>
 
-    <!-- Properties Section -->
-    <section class="properties-section" id="properties">
+
+
+
+    <!-- Work Approach Section -->
+    <section class="work-approach-section" id="work-approach">
         <div class="container">
             <div class="section-header center-text fade-on-scroll">
-                <h4 class="section-subtitle">Exclusive Listings</h4>
-                <h2 class="section-title">Curated <span class="gold-text">Collections</span></h2>
+                <h4 class="section-subtitle">My Process</h4>
+                <h2 class="section-title">How I <span class="gold-text">Work</span></h2>
+                <p class="section-description">A proven methodology designed to deliver exceptional results at every
+                    stage</p>
             </div>
 
-            <!-- Filters -->
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="estate">Estates</button>
-                <button class="filter-btn" data-filter="penthouse">Penthouses</button>
-                <button class="filter-btn" data-filter="modern">Modern</button>
-            </div>
-
-            <!-- Grid -->
-            <div class="properties-grid" id="properties-grid">
-                <!-- Property 1 -->
-                <div class="property-card" data-category="estate">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Modern Estate">
-                        <div class="price-tag">$12,500,000</div>
-                        <div class="image-overlay">
-                            <a href="#" class="view-btn">View Details</a>
+            <div class="approach-timeline">
+                <!-- Step 1 -->
+                <div class="approach-step fade-on-scroll">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
                         </div>
-                    </div>
-                    <div class="property-details">
-                        <h3 class="property-title">The Summit Estate</h3>
-                        <p class="property-location">Beverly Hills, CA</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 6 Beds</span>
-                            <span><i class="fas fa-bath"></i> 8 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 8,500 Sq Ft</span>
-                        </div>
+                        <h3 class="step-title">Initial Consultation</h3>
+                        <p class="step-description">
+                            We begin with an in-depth conversation to understand your goals, preferences,
+                            timeline, and budget. This foundation ensures every subsequent step is perfectly aligned
+                            with your vision.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Property 2 -->
-                <div class="property-card" data-category="penthouse">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Luxury Penthouse">
-                        <div class="price-tag">$8,750,000</div>
-                        <div class="image-overlay">
-                            <a href="#" class="view-btn">View Details</a>
+                <!-- Step 2 -->
+                <div class="approach-step fade-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-bar"></i>
                         </div>
-                    </div>
-                    <div class="property-details">
-                        <h3 class="property-title">Skyline Penthouse</h3>
-                        <p class="property-location">Downtown LA, CA</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 3 Beds</span>
-                            <span><i class="fas fa-bath"></i> 4 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 3,200 Sq Ft</span>
-                        </div>
+                        <h3 class="step-title">Market Analysis</h3>
+                        <p class="step-description">
+                            Leveraging comprehensive market data and local expertise, I provide detailed insights
+                            into current trends, property values, and opportunities to inform your decision-making.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Property 3 -->
-                <div class="property-card" data-category="modern">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Modern Villa">
-                        <div class="price-tag">$5,900,000</div>
-                        <div class="image-overlay">
-                            <a href="#" class="view-btn">View Details</a>
+                <!-- Step 3 -->
+                <div class="approach-step fade-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-search-location"></i>
                         </div>
-                    </div>
-                    <div class="property-details">
-                        <h3 class="property-title">Coastal Modern Villa</h3>
-                        <p class="property-location">Malibu, CA</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 4 Beds</span>
-                            <span><i class="fas fa-bath"></i> 5 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 4,100 Sq Ft</span>
-                        </div>
+                        <h3 class="step-title">Property Search & Marketing</h3>
+                        <p class="step-description">
+                            For buyers: curated property tours and exclusive access to off-market listings.
+                            For sellers: strategic marketing campaigns that showcase your property's unique appeal.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Property 4 -->
-                <div class="property-card" data-category="estate">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Classic Estate">
-                        <div class="price-tag">$18,000,000</div>
-                        <div class="image-overlay">
-                            <a href="#" class="view-btn">View Details</a>
+                <!-- Step 4 -->
+                <div class="approach-step fade-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-handshake"></i>
                         </div>
-                    </div>
-                    <div class="property-details">
-                        <h3 class="property-title">Bel Air Manor</h3>
-                        <p class="property-location">Bel Air, CA</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 8 Beds</span>
-                            <span><i class="fas fa-bath"></i> 10 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 12,000 Sq Ft</span>
-                        </div>
+                        <h3 class="step-title">Negotiation & Offer</h3>
+                        <p class="step-description">
+                            Expert negotiation to secure the best possible terms, whether you're buying or selling.
+                            I advocate fiercely for your interests while maintaining professional relationships.
+                        </p>
                     </div>
                 </div>
-            </div>
 
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="#" class="btn btn-primary">View All Properties</a>
+                <!-- Step 5 -->
+                <div class="approach-step fade-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h3 class="step-title">Closing & Beyond</h3>
+                        <p class="step-description">
+                            Seamless coordination through inspections, appraisals, and closing. My support doesn't
+                            end at the signature—I'm here for you long after the transaction is complete.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Blog Section -->
+
     <section class="blog-section" id="blog">
         <div class="container">
             <div class="section-header center-text">
@@ -397,101 +463,9 @@
         </div>
     </section>
 
-    <!-- Neighborhoods Section -->
-    <section class="neighborhoods-section" id="neighborhoods">
-        <div class="container">
-            <div class="section-header center-text fade-on-scroll">
-                <h4 class="section-subtitle">Areas of Expertise</h4>
-                <h2 class="section-title">Curated <span class="gold-text">Communities</span></h2>
-            </div>
-
-            <!-- Neighborhood Grid -->
-            <div class="neighborhood-grid">
-                <!-- Beverly Hills -->
-                <div class="neighborhood-card fade-on-scroll">
-                    <div class="neighborhood-bg"
-                        style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                    </div>
-                    <div class="neighborhood-overlay"></div>
-                    <div class="neighborhood-content">
-                        <h3 class="neighborhood-name">Beverly Hills</h3>
-                        <p class="neighborhood-desc">The epitome of luxury living, featuring world-class
-                            shopping and iconic estates.</p>
-                        <a href="#" class="explore-btn">Explore Area</a>
-                    </div>
-                </div>
-
-                <!-- Malibu -->
-                <div class="neighborhood-card fade-on-scroll" style="animation-delay: 0.1s;">
-                    <div class="neighborhood-bg"
-                        style="background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                    </div>
-                    <div class="neighborhood-overlay"></div>
-                    <div class="neighborhood-content">
-                        <h3 class="neighborhood-name">Malibu</h3>
-                        <p class="neighborhood-desc">Breathtaking oceanfront properties where coastal chic meets
-                            exclusive privacy.</p>
-                        <a href="#" class="explore-btn">Explore Area</a>
-                    </div>
-                </div>
-
-                <!-- Bel Air -->
-                <div class="neighborhood-card fade-on-scroll" style="animation-delay: 0.2s;">
-                    <div class="neighborhood-bg"
-                        style="background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                    </div>
-                    <div class="neighborhood-overlay"></div>
-                    <div class="neighborhood-content">
-                        <h3 class="neighborhood-name">Bel Air</h3>
-                        <p class="neighborhood-desc">Historic prestige and grand mansions nestled within lush,
-                            gated serenity.</p>
-                        <a href="#" class="explore-btn">Explore Area</a>
-                    </div>
-                </div>
-
-                <!-- Hidden Hills -->
-                <div class="neighborhood-card fade-on-scroll" style="animation-delay: 0.3s;">
-                    <div class="neighborhood-bg"
-                        style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                    </div>
-                    <div class="neighborhood-overlay"></div>
-                    <div class="neighborhood-content">
-                        <h3 class="neighborhood-name">Hidden Hills</h3>
-                        <p class="neighborhood-desc">Equestrian elegance and ultimate seclusion for the most
-                            discerning buyers.</p>
-                        <a href="#" class="explore-btn">Explore Area</a>
-                    </div>
-                </div>
-            </div>
 
 
-        </div>
-    </section>
 
-    <!-- Service Areas Section -->
-    <section class="service-areas-section" id="service-areas">
-        <div class="container">
-            <div class="section-header center-text fade-on-scroll">
-                <h4 class="section-subtitle">Expanding Our Reach</h4>
-                <h2 class="section-title">Areas We <span class="gold-text">Cover</span></h2>
-            </div>
-
-            <div class="area-search-container fade-on-scroll">
-                <div class="area-search-wrapper">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" id="area-search-input" placeholder="Search for your city...">
-                </div>
-            </div>
-
-            <div class="areas-grid" id="areas-grid">
-                <!-- Areas will be populated by JavaScript -->
-            </div>
-
-            <div class="areas-pagination fade-on-scroll" style="display: none;">
-                <button id="show-more-areas" class="btn btn-outline-dark">Show More</button>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
