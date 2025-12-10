@@ -181,15 +181,15 @@ const areasGrid = document.getElementById('areas-grid');
 const areaSearchInput = document.getElementById('area-search-input');
 const showMoreBtn = document.getElementById('show-more-areas');
 
-let visibleAreasCount = 24; // Initial number of areas to show
+let visibleAreasCount = window.innerWidth < 768 ? 10 : 24; // Initial number of areas to show (fewer on mobile)
 let currentFilteredAreas = [...serviceAreas];
 
 function renderAreas() {
     if (!areasGrid) return;
-    
+
     areasGrid.innerHTML = '';
     const areasToShow = currentFilteredAreas.slice(0, visibleAreasCount);
-    
+
     if (areasToShow.length === 0) {
         areasGrid.innerHTML = '<div class="no-results">No areas found matching your search.</div>';
     } else {
@@ -199,9 +199,9 @@ function renderAreas() {
             areaItem.textContent = area;
             // Add click interaction (animate and maybe alert or log)
             areaItem.addEventListener('click', () => {
-                 // Feedback effect
-                 areaItem.style.transform = 'scale(0.95)';
-                 setTimeout(() => areaItem.style.transform = 'translateY(-3px)', 150);
+                // Feedback effect
+                areaItem.style.transform = 'scale(0.95)';
+                setTimeout(() => areaItem.style.transform = 'translateY(-3px)', 150);
             });
             areasGrid.appendChild(areaItem);
         });
@@ -221,7 +221,7 @@ function renderAreas() {
 if (areaSearchInput) {
     areaSearchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
-        currentFilteredAreas = serviceAreas.filter(area => 
+        currentFilteredAreas = serviceAreas.filter(area =>
             area.toLowerCase().includes(query)
         );
         visibleAreasCount = 24; // Reset visible count on search
