@@ -148,3 +148,80 @@ if (sliderTrack) {
     const cards = sliderTrack.innerHTML;
     sliderTrack.innerHTML += cards; // Duplicate content once to create the loop
 }
+
+// Contact Form Handling with Formspree
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(contactForm);
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.textContent;
+
+        // Disable submit button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        // Hide any previous status messages
+        formStatus.classList.remove('show', 'success', 'error');
+
+        try {
+            // Submit form to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Success - show success message
+                formStatus.textContent = '✓ Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
+                formStatus.classList.add('show', 'success');
+
+                // Reset form
+                contactForm.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.remove('show');
+                }, 5000);
+            } else {
+                // Error from Formspree
+                const data = await response.json();
+                if (data.errors) {
+                    formStatus.textContent = '✗ ' + data.errors.map(error => error.message).join(', ');
+                } else {
+                    formStatus.textContent = '✗ Oops! There was a problem sending your message. Please try again.';
+                }
+                formStatus.classList.add('show', 'error');
+            }
+        } catch (error) {
+            // Network or other error
+            formStatus.textContent = '✗ Network error. Please check your connection and try again.';
+            formStatus.classList.add('show', 'error');
+        } finally {
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
+    });
+
+    // Basic client-side validation feedback
+    const formInputs = contactForm.querySelectorAll('input[required], textarea[required]');
+    formInputs.forEach(input => {
+        input.addEventListener('invalid', (e) => {
+            e.preventDefault();
+            input.classList.add('error');
+        });
+
+        input.addEventListener('input', () => {
+            input.classList.remove('error');
+        });
+    });
+}
