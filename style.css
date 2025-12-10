@@ -3,7 +3,7 @@
     /* Rich Midnight Blue */
     --secondary-color: #1C2541;
     /* Charcoal Blue */
-    --accent-color: #C5A059;
+    --accent-color: #debe05;
     /* Metallic Gold - Darker for Light Backgrounds */
     --accent-bright: #FFD700;
     /* Bright Gold - For Dark Backgrounds */
@@ -462,9 +462,9 @@ ul {
 }
 
 .floating-box-3 {
-    bottom: -20px;
-    right: 20px;
-    animation: fadeInRight 0.8s ease-out 1.8s forwards, float 3s ease-in-out 2.6s infinite;
+    bottom: 0px;
+    left: 100px;
+    animation: fadeInLeftBottom 0.8s ease-out 1.8s forwards, float 3s ease-in-out 2.6s infinite;
 }
 
 @keyframes fadeInLeft {
@@ -476,6 +476,18 @@ ul {
     to {
         opacity: 1;
         transform: translateX(0) translateY(-50%);
+    }
+}
+
+@keyframes fadeInLeftBottom {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -958,13 +970,16 @@ ul {
 
     /* Adjust floating boxes for mobile */
     .floating-box {
-        padding: 8px 12px;
-        font-size: 0.7rem;
-        gap: 6px;
+        padding: 4px 6px;
+        font-size: 0.5rem;
+        gap: 3px;
+        white-space: nowrap;
+        letter-spacing: 0px;
+        max-width: fit-content;
     }
 
     .floating-box i {
-        font-size: 0.9rem;
+        font-size: 0.65rem;
     }
 
     .floating-box-1 {
@@ -979,7 +994,11 @@ ul {
 
     .floating-box-3 {
         bottom: -10px;
-        right: 10px;
+        left: 10px;
+        font-size: 0.4rem;
+        padding: 3px 4px;
+        gap: 2px;
+        letter-spacing: -0.3px;
     }
 
     /* Hide scroll down indicator on mobile */
