@@ -267,7 +267,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 150px;
+    padding-top: 200px;
     /* Offset for navbar */
     gap: 30px;
 }
@@ -1812,6 +1812,17 @@ ul {
 /* =========================================
    RESPONSIVE DESIGN (Media Queries)
    ========================================= */
+
+/* Large Laptops (max-width: 1440px) */
+@media (max-width: 1440px) {
+    .main-tagline {
+        font-size: 3.5rem;
+    }
+
+    .hero-content {
+        padding-top: 180px;
+    }
+}
 
 /* Laptops and Smaller Desktops (max-width: 1350px) */
 @media (max-width: 1350px) {
